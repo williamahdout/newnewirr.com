@@ -1,0 +1,44 @@
+{
+  "timeline_index": 8,
+  "planner": {
+    "Team Leader": {
+      "1": {
+        "task_id": "1",
+        "dependent_task_ids": [],
+        "instruction": "Create a web-based IRR calculator that takes start date, end date, beginning balance, and ending balance as inputs and calculates the IRR.",
+        "task_type": "general",
+        "code": "",
+        "result": "",
+        "is_success": false,
+        "is_finished": true,
+        "assignee": "Alex",
+        "start_at": 1744988887.6265202,
+        "end_at": 1744988993.1640418
+      },
+      "current_task_id": "1"
+    }
+  },
+  "gallery_last_file": {},
+  "timeline_status": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "5": 1,
+    "6": 0,
+    "7": 1,
+    "8": 1
+  },
+  "preview_servers": {
+    "a5eac6dc-49a9-47a0-bbbb-3ce1435b59e8": {
+      "role": "Alex",
+      "port": 5174,
+      "subdomain": "irr-calculator-iq6okd-oh6a8-5b59e8",
+      "server": "51c9cc50-b4cb-4de2-8560-dfecbc2eb6be",
+      "cmd": "pnpm i && pnpm run lint && pnpm run dev",
+      "timeline_index": 6,
+      "status": "success",
+      "logs": []
+    }
+  },
+  "deploy": {}
+}

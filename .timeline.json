@@ -1,11 +1,11 @@
 {
-  "timeline_index": 24,
+  "timeline_index": 30,
   "planner": {
     "Team Leader": {
       "1": {
         "task_id": "1",
         "dependent_task_ids": [],
-        "instruction": "Add comma separators for numerical inputs and displays in the IRR calculator.",
+        "instruction": "Fix page expiration issues in the IRR calculator web application.",
         "task_type": "general",
         "code": "",
         "result": "",
@@ -13,7 +13,7 @@
         "is_finished": true,
         "assignee": "Alex",
         "start_at": 1744988887.6265202,
-        "end_at": 1744990390.3766909
+        "end_at": 1744992738.2217062
       },
       "current_task_id": "1"
     }
@@ -42,16 +42,22 @@
     "21": 1,
     "22": 1,
     "23": 1,
-    "24": 1
+    "24": 1,
+    "25": 1,
+    "26": 1,
+    "27": 1,
+    "28": 0,
+    "29": 1,
+    "30": 1
   },
   "preview_servers": {
-    "a3e289e2-8c64-413e-aebd-1ff6da3c4420": {
+    "a35be097-4273-447a-bd76-0f82ba8bf624": {
       "role": "Alex",
-      "port": 3000,
-      "subdomain": "irr-calculator-iq6okd-oh6a8-3c4420",
-      "server": "89caddbf-0f36-4f4f-9124-4d1bc5dbad99",
-      "cmd": "pkill -f vite && pnpm run dev",
-      "timeline_index": 15,
+      "port": 3001,
+      "subdomain": "irr-calculator-iq6okd-oh6a8-8bf624",
+      "server": "adca0f16-a933-4529-a2aa-0297a5c6c0c8",
+      "cmd": "pnpm run dev",
+      "timeline_index": 28,
       "status": "success",
       "logs": []
     }

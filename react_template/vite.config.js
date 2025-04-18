@@ -7,12 +7,19 @@ export default defineConfig({
   server: {
     port: 3000,
     hmr: {
-      timeout: 10000,
+      timeout: 120000,
       protocol: 'ws',
-      host: 'localhost'
+      clientPort: 443,
+      overlay: true,
+    },
+    watch: {
+      usePolling: true,
+      interval: 1000,
     },
     headers: {
-      'Access-Control-Allow-Origin': '*'
+      'Cache-Control': 'no-store',
+      'Connection': 'keep-alive',
+      'Keep-Alive': 'timeout=120',
     }
   }
 })

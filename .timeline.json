@@ -1,11 +1,11 @@
 {
-  "timeline_index": 17,
+  "timeline_index": 24,
   "planner": {
     "Team Leader": {
       "1": {
         "task_id": "1",
         "dependent_task_ids": [],
-        "instruction": "Create a web-based IRR calculator that takes start date, end date, beginning balance, and ending balance as inputs and calculates the IRR.",
+        "instruction": "Add comma separators for numerical inputs and displays in the IRR calculator.",
         "task_type": "general",
         "code": "",
         "result": "",
@@ -13,7 +13,7 @@
         "is_finished": true,
         "assignee": "Alex",
         "start_at": 1744988887.6265202,
-        "end_at": 1744988993.1640418
+        "end_at": 1744990390.3766909
       },
       "current_task_id": "1"
     }
@@ -35,7 +35,14 @@
     "14": 1,
     "15": 0,
     "16": 1,
-    "17": 1
+    "17": 1,
+    "18": 1,
+    "19": 1,
+    "20": 1,
+    "21": 1,
+    "22": 1,
+    "23": 1,
+    "24": 1
   },
   "preview_servers": {
     "a3e289e2-8c64-413e-aebd-1ff6da3c4420": {

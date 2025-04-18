@@ -44,7 +44,7 @@ function App() {
       return;
     }
 
-    if (parseFloat(beginBalance) <= 0 || parseFloat(endBalance) <= 0) {
+    if (parseFloat(beginBalance.replace(/,/g, '')) <= 0 || parseFloat(endBalance.replace(/,/g, '')) <= 0) {
       setError('Balances must be positive numbers');
       return;
     }
@@ -53,8 +53,8 @@ function App() {
       const irrResult = calculateIRR(
         startDate,
         endDate,
-        parseFloat(beginBalance),
-        parseFloat(endBalance)
+        parseFloat(beginBalance.replace(/,/g, '')),
+        parseFloat(endBalance.replace(/,/g, ''))
       );
       setResult(irrResult);
     } catch (err) {
@@ -107,14 +107,23 @@ function App() {
                 <span className="text-gray-500 sm:text-sm">$</span>
               </div>
               <input
-                type="number"
+                type="text"
                 id="beginBalance"
                 value={beginBalance}
-                onChange={(e) => setBeginBalance(e.target.value)}
+                onChange={(e) => {
+                  const value = e.target.value.replace(/[^0-9.]/g, '');
+                  if (value === '' || (!isNaN(parseFloat(value)) && parseFloat(value) >= 0)) {
+                    setBeginBalance(value);
+                  }
+                }}
+                onBlur={(e) => {
+                  if (e.target.value) {
+                    const num = parseFloat(e.target.value);
+                    setBeginBalance(num.toLocaleString('en-US'));
+                  }
+                }}
                 className="pl-7 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 placeholder="0.00"
-                step="0.01"
-                min="0"
                 required
               />
             </div>
@@ -129,14 +138,23 @@ function App() {
                 <span className="text-gray-500 sm:text-sm">$</span>
               </div>
               <input
-                type="number"
+                type="text"
                 id="endBalance"
                 value={endBalance}
-                onChange={(e) => setEndBalance(e.target.value)}
+                onChange={(e) => {
+                  const value = e.target.value.replace(/[^0-9.]/g, '');
+                  if (value === '' || (!isNaN(parseFloat(value)) && parseFloat(value) >= 0)) {
+                    setEndBalance(value);
+                  }
+                }}
+                onBlur={(e) => {
+                  if (e.target.value) {
+                    const num = parseFloat(e.target.value);
+                    setEndBalance(num.toLocaleString('en-US'));
+                  }
+                }}
                 className="pl-7 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 placeholder="0.00"
-                step="0.01"
-                min="0"
                 required
               />
             </div>
@@ -158,7 +176,8 @@ function App() {
 
         {result !== null && !error && (
           <div className="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
-            The Internal Rate of Return (IRR) is: {result.toFixed(2)}%
+            The Internal Rate of Return (IRR) is: {result.toFixed(2)}% <br />
+            Based on initial investment of ${parseFloat(beginBalance.replace(/,/g, '')).toLocaleString('en-US')} and final value of ${parseFloat(endBalance.replace(/,/g, '')).toLocaleString('en-US')}
           </div>
         )}
       </div>

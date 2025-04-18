@@ -33,7 +33,7 @@
     "12": 1,
     "13": 1,
     "14": 1,
-    "15": 0,
+    "15": 1,
     "16": 1,
     "17": 1,
     "18": 1,
@@ -53,13 +53,23 @@
   "preview_servers": {
     "a35be097-4273-447a-bd76-0f82ba8bf624": {
       "role": "Alex",
-      "port": 3001,
+      "port": 3000,
       "subdomain": "irr-calculator-iq6okd-oh6a8-8bf624",
       "server": "adca0f16-a933-4529-a2aa-0297a5c6c0c8",
       "cmd": "pnpm run dev",
       "timeline_index": 28,
-      "status": "success",
-      "logs": []
+      "status": "initializing",
+      "logs": [
+        "Restarting the service ...\n",
+        "\n",
+        "\n",
+        "> react-template@0.0.0 dev /data/chats/oh6a8/workspace/react_template\n",
+        "> vite\n",
+        "\n",
+        "\n",
+        "  VITE v5.4.3  ready in 403 ms\n",
+        "\n"
+      ]
     }
   },
   "deploy": {}

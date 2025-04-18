@@ -1,5 +1,5 @@
 {
-  "timeline_index": 8,
+  "timeline_index": 17,
   "planner": {
     "Team Leader": {
       "1": {
@@ -24,18 +24,27 @@
     "2": 1,
     "3": 1,
     "5": 1,
-    "6": 0,
+    "6": 1,
     "7": 1,
-    "8": 1
+    "8": 1,
+    "9": 1,
+    "10": 1,
+    "11": 0,
+    "12": 1,
+    "13": 1,
+    "14": 1,
+    "15": 0,
+    "16": 1,
+    "17": 1
   },
   "preview_servers": {
-    "a5eac6dc-49a9-47a0-bbbb-3ce1435b59e8": {
+    "a3e289e2-8c64-413e-aebd-1ff6da3c4420": {
       "role": "Alex",
-      "port": 5174,
-      "subdomain": "irr-calculator-iq6okd-oh6a8-5b59e8",
-      "server": "51c9cc50-b4cb-4de2-8560-dfecbc2eb6be",
-      "cmd": "pnpm i && pnpm run lint && pnpm run dev",
-      "timeline_index": 6,
+      "port": 3000,
+      "subdomain": "irr-calculator-iq6okd-oh6a8-3c4420",
+      "server": "89caddbf-0f36-4f4f-9124-4d1bc5dbad99",
+      "cmd": "pkill -f vite && pnpm run dev",
+      "timeline_index": 15,
       "status": "success",
       "logs": []
     }
